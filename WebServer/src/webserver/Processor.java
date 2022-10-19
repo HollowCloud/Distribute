@@ -45,6 +45,7 @@ public class Processor {
             int size, i, j, temp;  
             int arr[] = new int[1000000];      
             Scanner scan = new Scanner(System.in);  
+            long startTime = System.currentTimeMillis();
 
             System.out.print("Enter Array Size : ");  
             size = scan.nextInt();
@@ -78,6 +79,11 @@ public class Processor {
                 System.out.print(arr[i]+ "  ");  
             }  
             
+            long endTime = System.currentTimeMillis();
+            System.out.println("");
+            System.out.println("###################################################");
+            System.out.println("That took " + (endTime - startTime) + " milliseconds");
+            System.out.println("###################################################");
             
             output.println("HTTP/1.1 200 OK");
             output.println("Content-Type: text/html; charset=utf-8");
